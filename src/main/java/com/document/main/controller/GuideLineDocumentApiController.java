@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.document.main.dto.GuideLineDocumentRequestVO;
 import com.document.main.dto.GuideLineDocumentResponseVO;
@@ -20,7 +21,7 @@ import com.document.main.service.GuideLineDocumentService;
 
 
 
-//@DivyangSecuredController
+@RestController
 public class GuideLineDocumentApiController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(GuideLineDocumentApiController.class);

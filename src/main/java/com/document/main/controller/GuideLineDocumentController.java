@@ -19,7 +19,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import org.springframework.web.bind.annotation.RestController;
 
 import com.document.main.dto.GuideLineDocumentResponseVO;
 import com.document.main.dto.ResponseVO;
@@ -29,7 +29,7 @@ import com.document.main.utils.Messages;
 
 
 
-
+@RestController
 public class GuideLineDocumentController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(GuideLineDocumentController.class);
@@ -61,7 +61,7 @@ public class GuideLineDocumentController {
 	}
 
 
-	@GetMapping("/guidelineDocuments")
+	@GetMapping("/guidelineDocuments/active")
 	public ResponseVO<Map<String, List<GuideLineDocumentResponseVO>>> getAllActiveGuidelineDocumentstest() {
 		return guideLineDocumentService.getAllActiveGuidelineDocuments();
 	}
